@@ -22,14 +22,16 @@ function deleteBookmarkRequest(bookmarkId, callback) {
           throw error
         })
       }
-      return res.json()
+      return res
     })
     .then(data => {
       // call the callback when the request is successful
       // this is where the App component can remove it from state
+      console.log('inside then block')
       callback(bookmarkId)
     })
     .catch(error => {
+      console.log('inside catch block')
       console.error(error)
     })
 }

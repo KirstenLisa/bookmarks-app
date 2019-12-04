@@ -55,6 +55,7 @@ class App extends Component {
         const newBookmarks = this.state.bookmarks.filter(bm =>
           bm.id !== bookmarkId
         )
+        console.log(newBookmarks)
         this.setState({
           bookmarks: newBookmarks
         })
